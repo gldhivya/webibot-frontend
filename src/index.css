@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+
+  background: radial-gradient(circle at top, #1e293b, #020617 70%);
+
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.app {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.welcome {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.creator {
+  color: #94a3b8;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 60px;
+  color: white;
+  text-shadow: 0 0 25px #38bdf8;
+}
+
+.tagline {
+  color: #cbd5e1;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.chat-box {
+  width: 500px;
+  max-width: 95%;
+
+  margin: auto;
+  padding: 25px;
+
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(56, 189, 248, 0.3);
+
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.3),
+    0 0 60px rgba(56, 189, 248, 0.15);
+
+  animation: floatBox 4s ease-in-out infinite;
+}
+
+@keyframes floatBox {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.bot-avatar {
+  font-size: 60px;
+  margin-bottom: 15px;
+
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #38bdf8;
+  }
+  to {
+    text-shadow: 0 0 25px #38bdf8;
+  }
+}
+
+.chat-area {
+  max-height: 300px;
+  overflow-y: auto;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.bot-msg {
+  background: #1e293b;
+  padding: 12px;
+  border-radius: 12px;
+  margin: 8px 0;
+  color: white;
+}
+
+.user-msg {
+  background: #38bdf8;
+  color: black;
+  padding: 12px;
+  border-radius: 12px;
+  margin: 8px 0;
+  text-align: right;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+
+  border: none;
+  border-radius: 10px;
+
+  font-size: 15px;
+}
+
+.ask-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #38bdf8;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.ask-btn:hover {
+  background: #0ea5e9;
+  transform: scale(1.05);
+}
